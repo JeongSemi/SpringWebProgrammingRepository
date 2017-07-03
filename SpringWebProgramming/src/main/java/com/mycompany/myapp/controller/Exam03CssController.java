@@ -1,0 +1,25 @@
+package com.mycompany.myapp.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/css") //공통경로
+public class Exam03CssController {
+
+    @RequestMapping("/exam01")
+    public String cssExam01() {
+        return "css/exam01"; //리턴되는 값-> .jsp와 밀접한 관련
+    }
+
+    @RequestMapping("/exam02")
+    public String cssExam02() {
+        return "css/exam02"; //리턴값.jsp가 실행된다
+    }
+
+    @RequestMapping("/exam03")
+    public String cssExam03() {
+        return "css/exam03"; //리턴값.jsp가 실행된다
+    }
+
+}
