@@ -7,8 +7,8 @@
 	<!-- Connection Pool(DataSource) 설정 -->
 	<bean name="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="oracle.jdbc.OracleDriver" />
-		<property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:orcl" />
-		<property name="user" value="iotuser" />
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@117.17.198.43:1531:orcl" />
+		<property name="user" value="djsuser" />
 		<property name="password" value="iot12345" />
 		<property name="maxPoolSize" value="1" />
 		<property name="initialPoolSize" value="1" />

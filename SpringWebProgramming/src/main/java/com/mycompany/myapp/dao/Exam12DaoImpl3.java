@@ -97,7 +97,7 @@ public class Exam12DaoImpl3 implements Exam12Dao {
 	@Override
 	public String memberInsert(Exam12Member member) {
 
-		sqlSessionTemplate.update("member.insert");
+		sqlSessionTemplate.insert("member.insert", member);
 		LOGGER.info("행 추가 성공");
 
 		return member.getMid();

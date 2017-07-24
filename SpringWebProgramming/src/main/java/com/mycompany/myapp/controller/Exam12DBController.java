@@ -77,18 +77,21 @@ public class Exam12DBController {
 	public String exam03Post(Exam12Member member) throws Exception { // board ->
 																		// 커맨드객체
 		// 첨부 파일에 대한 정보를 컬럼값으로 설정
+		System.out.println("1");
 		member.setMoriginalfilename(member.getMattach().getOriginalFilename());
 		member.setMfilecontent(member.getMattach().getContentType());
 		String fileName = new Date().getTime() + "-" + member.getMoriginalfilename();
 		member.setMsavedfilename(fileName);
 
 		// 첨부파일을 서버 로컬 시스템에 저장
+		System.out.println("2");
 		String realPath = servletContext.getRealPath("/WEB-INF/upload/");
 		File file = new File(realPath + fileName);
 		member.getMattach().transferTo(file);
-
+		System.out.println("3");
 		// 서비스객체로 요청 처리
 		service.memberJoin(member);
+		System.out.println("4");
 		return "redirect:/";
 	}
 
