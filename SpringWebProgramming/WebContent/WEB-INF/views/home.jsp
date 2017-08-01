@@ -7,6 +7,10 @@
         <link href="<%=application.getContextPath()%>/resources/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
         <script src="<%=application.getContextPath()%>/resources/jquery/jquery-3.2.1.min.js" type="text/javascript"></script> 
         <script src="<%=application.getContextPath()%>/resources/bootstrap-3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        $('#myModal').modal('show');
+        $('#joinModal').modal('show');
+        </script>
     </head>
 
     <body>
@@ -112,5 +116,64 @@
 		<a href="websocket/measureClient" class="btn btn-primary">측정값 얻기</a>
 		<a href="websocket/chatClient" class="btn btn-primary">채팅 클라이언트</a>
 		
+		<h4>Modal/Login</h4>
+		<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">모달창 띄우기</button>
+		<!-- 모달창 -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		       Modal body
+		       </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		 
+		<button type="button" class="btn btn-info" data-toggle="modal" data-target="#joinModal">로그인 모달</button>
+		<!-- 모달창 -->
+		<div class="modal fade" id="joinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">로그인</h4>
+		      </div>
+		      <div class="modal-body">
+		       <form>
+		        <div class="form-group">
+				    <label for="exampleInputEmail1">Email address</label>
+				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleInputPassword1">Password</label>
+				    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleInputFile">File input</label>
+				    <input type="file" id="exampleInputFile">
+				    <p class="help-block">Example block-level help text here.</p>
+				  </div>
+				  <div class="checkbox">
+				    <label>
+				      <input type="checkbox"> Check me out
+				    </label>
+				  </div>
+				  </form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+		        <button type="submit" class="btn btn-primary">로그인</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
     </body>
 </html>
