@@ -125,9 +125,9 @@ public class Exam13CookieAndSessionController {
 	public String exam05(@ModelAttribute String name1, @ModelAttribute String name2,
 			@ModelAttribute Exam13Member member) {
 
-		LOGGER.debug(name1);
-		LOGGER.debug(name2);
-		LOGGER.debug(member.getMname());
+		LOGGER.info(name1);
+		LOGGER.info(name2);
+		LOGGER.info(member.getMname());
 
 		return "session/exam05";
 	}
